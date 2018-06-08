@@ -8,5 +8,7 @@
  */
 class Foo_Bar
 {
-
+    public function test(){
+        echo 111;
+    }
 }

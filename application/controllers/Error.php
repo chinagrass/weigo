@@ -1,7 +1,11 @@
 <?php
 
 /**
- * 当有未捕获的异常, 则控制流会流到这里
+ * 当该Controller下有未捕获的异常, 则控制流会流到这里,可以在这里将相应的错误输出
+ * Created by PhpStorm.
+ * User: David
+ * Date: 2018/4/11
+ * Time: 11:28
  */
 class ErrorController extends Yaf_Controller_Abstract
 {
@@ -10,19 +14,6 @@ class ErrorController extends Yaf_Controller_Abstract
      */
     public function errorAction($exception)
     {
-        switch ($exception->getCode()) {
-            case YAF_ERR_LOADFAILD:
-            case YAF_ERR_LOADFAILD_MODULE:
-            case YAF_ERR_LOADFAILD_CONTROLLER:
-            case YAF_ERR_LOADFAILD_ACTION:
-                //404
-                header("Not Found");
-                break;
-
-            case CUSTOM_ERROR_CODE:
-                //自定义的异常
-
-                break;
-        }
+        echo "Error: ".$exception->getCode();die;
     }
 }

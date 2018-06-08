@@ -12,8 +12,6 @@ class BarController extends Yaf_Controller_Abstract
     {//默认Action
         $bar = new Foo_Bar();
         $router = Yaf_Dispatcher::getInstance()->getRouter();
-        var_dump($router,$_GET);
-        die;
         $this->getView()->assign("content", "Hello World");
     }
 }

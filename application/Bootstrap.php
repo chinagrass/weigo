@@ -10,7 +10,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
 {
     public function _initConfig()
     {
-        var_dump($_SERVER);
         $config = Yaf_Application::app()->getConfig();
         Yaf_Registry::set("config", $config);
     }
@@ -24,21 +23,20 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
 
     public function _initPlugin(Yaf_Dispatcher $dispatcher)
     {
-        $user = new UserPlugin();
+        /*$user = new UserPlugin();
         $dispatcher->registerPlugin($user);
+        $config = Yaf_Registry::get("config");
+        $layoutsDir = $config->get("application.layouts.dir");
+        $layoutsFile = 'index.phtml';
+        $layouts = new LayoutsPlugin($layoutsFile, $layoutsDir);
+        $dispatcher->registerPlugin($layouts);*/
     }
 
-    public function _initRoute(Yaf_Dispatcher $dispatcher) {
-        $router = Yaf_Dispatcher::getInstance()->getRouter();
-        /**
-         * 添加配置中的路由
-         */
-        //var_dump($router,Yaf_Registry::get("config")->routes);die;
-        $router->addConfig(Yaf_Registry::get("config")->routes);
-    }
-
-    public function _initDefaultName(Yaf_Dispatcher $dispatcher)
+    public function _initLayouts(Yaf_Dispatcher $dispatcher)
     {
-        $dispatcher->setDefaultModule("Index")->setDefaultController("Index")->setDefaultAction("index");
+
+        //$dispatcher->setView($layouts);
     }
+
+
 }

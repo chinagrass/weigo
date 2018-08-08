@@ -15,6 +15,7 @@ class LoginController extends Yaf_Controller_Abstract
         if ($session->has('id') && $session->has('user_name')) {
             $this->redirect(MAIN_SERVER . "/admin/index/index");
         }
+        $this->getView()->assign("errormsg", '');
         $post = $this->getRequest()->getPost();
         if (!empty($post['username']) && !empty($post['password'])) {
             $model = new Admin_AdminUsersModel();

@@ -10,11 +10,6 @@ class IndexController extends BaseIndexController
 {
     public function indexAction()
     {
-        $this->getView()->assign("content", "Hello World");
-    }
-
-    public function testAction()
-    {
-        echo "test";die;
+        $this->getView()->assign("content", "Welcome to weigo.org");
     }
 }

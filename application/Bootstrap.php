@@ -16,9 +16,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
 
     public function _initLoader()
     {
-        //申明, 凡是以Foo和Local开头的类, 都是本地类
-        $loader = Yaf_Loader::getInstance();
-        $loader->registerLocalNamespace(array("Foo", "Local"));
+        //Yaf_Loader::implort();
     }
 
     public function _initPlugin(Yaf_Dispatcher $dispatcher)

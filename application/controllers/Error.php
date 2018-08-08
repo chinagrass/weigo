@@ -14,6 +14,6 @@ class ErrorController extends Yaf_Controller_Abstract
      */
     public function errorAction($exception)
     {
-        echo "Error: ".$exception->getCode();die;
+        //echo "Error: ".$exception->getCode(),"Error_Message: ".$exception->getMessage();die;
     }
 }

@@ -1,14 +1,5 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: David
- * Date: 2018/5/16
- * Time: 12:18
- */
-namespace Helper;
-
-class Html
+class Helper_Html
 {
     protected static $encoding;
 

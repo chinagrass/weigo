@@ -32,8 +32,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
 
     public function _initLayouts(Yaf_Dispatcher $dispatcher)
     {
-
-        //$dispatcher->setView($layouts);
+        $config = Yaf_Registry::get("config");
+        $layoutsDir = $config->get("application.layouts.dir");
+        $layoutsFile = $config->get("application.layouts.index");;
+        $layouts = new LayoutsPlugin($layoutsFile, $layoutsDir);
+        $dispatcher->registerPlugin($layouts);
     }
 
 

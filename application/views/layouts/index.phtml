@@ -1,1 +1,58 @@
-<?php echo $content;?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="曹伟,六枣先生,WeiGo,分享,一蓑烟雨任平生">
+    <meta name="description" content="六枣先生的个人网站。宅边有六枣树，故谓之曰六枣先生。">
+    <title>WeiGo</title>
+    <link rel="shortcut icon" href=<?php echo MAIN_SERVER . "/public/images/favicon.ico"; ?>>
+    <link rel="stylesheet" type="text/css" href=<?php echo MAIN_SERVER . "/public/css/bootstrap.min.css"; ?>>
+    <link rel="stylesheet" type="text/css" href=<?php echo MAIN_SERVER . "/public/css/style.css"; ?>>
+    <link rel="stylesheet" type="text/css" href=<?php echo MAIN_SERVER . "/public/css/font-awesome.min.css"; ?>>
+    <link rel="stylesheet" type="text/css" href=<?php echo MAIN_SERVER . "/public/css/nprogress.css"; ?>>
+    <script src=<?php echo MAIN_SERVER . "/public/js/jquery-2.1.4.min.js"; ?>></script>
+    <script src=<?php echo MAIN_SERVER . "/public/js/nprogress.js"; ?>></script>
+    <script src=<?php echo MAIN_SERVER . "/public/js/jquery.lazyload.min.js"; ?>></script>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container">
+            <div class="header-topbar hidden-xs link-border">
+                <ul class="site-nav topmenu">
+                    <!--<li><a href="javascript:()" >标签云</a></li>
+                    <li><a href="javascript:()" rel="nofollow" >读者墙</a></li>
+                    <li><a href="javascript:()" title="RSS订阅" ><i class="fa fa-rss"></i> RSS订阅</a></li>-->
+                </ul>
+                不问收获　只为耕耘
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#header-navbar" aria-expanded="false"><span class="sr-only"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <h1 class="logo hvr-bounce-in"><a href="#" title="WeiGo"><img
+                            src=<?php echo MAIN_SERVER . "/public/images/title.png"; ?> alt="WeiGo"></a></h1>
+            </div>
+            <div class="collapse navbar-collapse" id="header-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-cont="WeiGo" title="WeiGo" href="">首页</a></li>
+                    <li><a data-cont="博客" title="博客" href="http://blog.163.com/chinagrass@126">博客</a></li>
+                    <li><a data-cont="资讯分享" title="资讯分享" href="#">资讯分享</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="container">
+    <?php echo $content; ?>
+</section>
+<footer class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2018.Company name All rights reserved.</p>
+    </div>
+    <div id="gotop"><a class="gotop"></a></div>
+</footer>
+<script src=<?php echo MAIN_SERVER . "/public/js/bootstrap.min.js"; ?>></script>
+</body>
+</html>
